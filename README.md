@@ -10,8 +10,8 @@ This is a 3rd party skill that can either reside in `~/.mycroft/third_party_skil
 | JbLiveIntent   | Mycroft, jblive.tv                                        | Opens jblive.tv in the default browser                      | Opening J.B. Live.tv                                                                                              |
 | JbLiveAm       | Mycroft, jblive.am                                        | Opens jblive.am in the default browser                      | Opening J.B. Live.am                                                                                              |
 | JbLiveFm       | Mycroft, jblive.fm                                        | Opens jblive.fm in the default browser                      | Opening J.B. Live.fm                                                                                              |
-| JbLatestIntent | Mycroft, latest `show name` episode                       | Parses the appropriate rss feed and gets the first episode. | Opening latest `show name` episode media url.                                                                     |
-| JbListenIntent | Mycroft, listen to the latest `show name` episode         | Parses the appropriate rss feed and gets the first episode. | Opening latest `show name` page.                                                                     |
+| JbLatestIntent | Mycroft, latest `show name` episode                       | Parses the appropriate rss feed and gets the first episode. | Opening latest `show name`url.                                                                     |
+| JbListenIntent | Mycroft, listen to the latest `show name` episode         | Parses the appropriate rss feed and gets the first episode. | Opening latest `show name`                                                                      |
 
 # Shows
 | Show |
