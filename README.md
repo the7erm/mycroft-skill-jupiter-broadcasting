@@ -48,5 +48,6 @@ mkdir -p ~/.mycroft/third_party_skills/
 cd ~/.mycroft/third_party_skills/
 git clone https://github.com/the7erm/mycroft-skill-jupiter-broadcasting.git jupiter_broadcasting
 # restart the skills service
+./mycroft.sh restart
 ```
 
