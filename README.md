@@ -3,8 +3,6 @@ My 2nd attempt at creating a mycroft skill
 
 This is a 3rd party skill that can either reside in `~/.mycroft/third_party_skills/` or `/opt/mycroft/third_party` .
 
-This skill requires a specific pull request to be merged.  https://github.com/MycroftAI/mycroft-core/pull/222 at this point in time it's still not merged.  This code may be altered.
-
 # Intents
 | Intent         | Example Keyphrase                                         | Function                                                    | Output                                                                                                            |
 |----------------|-----------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -47,7 +45,25 @@ This skill requires a specific pull request to be merged.  https://github.com/My
 mkdir -p ~/.mycroft/third_party_skills/
 cd ~/.mycroft/third_party_skills/
 git clone https://github.com/the7erm/mycroft-skill-jupiter-broadcasting.git jupiter_broadcasting
-# restart the skills service
+workon mycroft
+# if that doesn't work try `source <path to virtualenv/bin/activate>`
+pip install -r requirements.txt
+# restart mycroft
 ./mycroft.sh restart
 ```
 
+## Configuring `mycroft.ini`
+By default the `JBSkill` uses `xdg-open` to open media & webpages.
+Everyone has their favorite media player feel free to set it to `vlc` please
+note `vlc --flag` will not work.  You'll need to write a wrapper script that
+calls `vlc` with the command line arguments you'd like.
+
+```ini
+[JupiterBroadcastingSkill]
+webpage_command = xdg-open
+media_command = xdg-open
+```
+
+## feedcache
+The JbSkill will only fetch a podcast once per hour.
+`~/.mycroft/skills/JbSkill/feedcache` is the location of the cache file.

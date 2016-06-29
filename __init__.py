@@ -305,7 +305,7 @@ class JbSkill(MycroftSkill):
         storage_path = join(self.file_system.path, 'feedcache')
         LOGGER.debug("storage_path:%s" % storage_path)
         storage = shelve.open(storage_path)
-        ttl = 30 * 60
+        ttl = 60 * 60
         link = ""
         try:
             fc = cache.Cache(storage, timeToLiveSeconds=ttl)
@@ -353,26 +353,41 @@ class JbSkill(MycroftSkill):
             for alt in alts:
                 self.tokenize_show(tokenizer, alt, entry)
 
+    def get_webpage_command(self):
+        open_cmd = "xdg-open"
+        if self.config:
+            open_cmd = self.config.get("webpage_command", open_cmd)
+        return open_cmd
+
+    def get_media_command(self):
+        open_cmd = "xdg-open"
+        if self.config:
+            open_cmd = self.config.get("media_command", open_cmd)
+        return open_cmd
+
     def handle_jb_live_intent(self, message):
         data = {
             "stream": "J.B. Lyve t.v."
         }
         self.speak_dialog("opening", data)
-        subprocess.check_output(['xdg-open', "http://jblive.tv/"])
+        open_cmd = self.get_webpage_command()
+        subprocess.check_output([open_cmd, "http://jblive.tv/"])
 
     def handle_jb_live_am_intent(self, message):
         data = {
             "stream": "J.B. Lyve a.m."
         }
         self.speak_dialog("opening", data)
-        subprocess.check_output(['xdg-open', "http://jblive.am/"])
+        open_cmd = self.get_webpage_command()
+        subprocess.check_output([open_cmd, "http://jblive.am/"])
 
     def handle_jb_live_fm_intent(self, message):
         data = {
             "stream": "J.B. Lyve f.m."
         }
         self.speak_dialog("opening", data)
-        subprocess.check_output(['xdg-open', "http://jblive.fm/"])
+        open_cmd = self.get_webpage_command()
+        subprocess.check_output([open_cmd, "http://jblive.fm/"])
 
     def should_skip(self, title):
         if not title:
@@ -392,6 +407,7 @@ class JbSkill(MycroftSkill):
         LOGGER.debug("latest entries:%s" % entries)
 
         if entries and len(entries) > 0:
+            open_cmd = self.get_webpage_command()
             entry = entries[0]
             LOGGER.debug("entry:%s" % entry)
             data = {
@@ -409,9 +425,11 @@ class JbSkill(MycroftSkill):
                     episode_link = self.get_latest_episode(rss_url, media)
                     if episode_link:
                         href = episode_link
+                        open_cmd = self.get_media_command()
                 break
 
-            subprocess.check_output(['xdg-open', href])
+
+            subprocess.check_output([open_cmd, href])
 
     def handle_jb_latest_intent(self, message):
         self.iterate_shows_to_latest(message, False)
@@ -431,7 +449,8 @@ class JbSkill(MycroftSkill):
                 "stream": "%s website" % entry.get("title", "")
             }
             self.speak_dialog("opening", data)
-            subprocess.check_output(['xdg-open', entry.get("href")])
+            open_cmd = self.get_webpage_command()
+            subprocess.check_output([open_cmd, entry.get("href")])
 
     def stop(self):
         pass
