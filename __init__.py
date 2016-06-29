@@ -2,8 +2,8 @@
 #
 # Mycroft Jupiter Broadcasting skill is free software: you can redistribute
 # it and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation, either version 2 of the License, or
-# (at your option) any later version.
+# published by the Free Software Foundation, either version 2 of the License,
+#  or (at your option) any later version.
 #
 # Mycroft Jupiter Broadcasting skill is distributed in the hope that it will
 #  be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -37,7 +37,8 @@ SHOWS = {
         ],
         "href": "http://www.jupiterbroadcasting.com/show/bsdnow/",
         "rss": {
-            "HD Torrent RSS": "http://bitlove.org/jupiterbroadcasting/bsdnowhd/feed",
+            "HD Torrent RSS": ("http://bitlove.org/jupiterbroadcasting"
+                               "/bsdnowhd/feed"),
             "HD Video RSS": "http://feeds.feedburner.com/BsdNowHd",
             "MP3 Audio RSS": "http://feeds.feedburner.com/BsdNowMp3",
             "Mobile Video RSS": "http://feeds.feedburner.com/BsdNowMobile",
@@ -51,10 +52,13 @@ SHOWS = {
     "Coder Radio": {
         "rss": {
             "MP3 Audio RSS": "http://feeds.feedburner.com/coderradiomp3",
-            "OGG Audio RSS": "http://www.jupiterbroadcasting.com/feeds/coderradioogg.xml",
+            "OGG Audio RSS": ("http://www.jupiterbroadcasting.com/feeds"
+                              "/coderradioogg.xml"),
             "Video RSS": "http://feeds.feedburner.com/coderradiovideo",
-            "iTunes MP3": "http://itunes.apple.com/us/podcast/coder-radio-mp3/id534941512",
-            "iTunes Video": "http://itunes.apple.com/us/podcast/coder-radio-video/id534941251"
+            "iTunes MP3": ("http://itunes.apple.com/us/podcast"
+                           "/coder-radio-mp3/id534941512"),
+            "iTunes Video": ("http://itunes.apple.com/us/podcast"
+                             "/coder-radio-video/id534941251")
         },
         "title": "Coder Radio"
     },
@@ -71,10 +75,14 @@ SHOWS = {
         ],
         "href": "http://www.jupiterbroadcasting.com/show/fauxshow/",
         "rss": {
-            "FauxShow HD RSS": "http://www.jupiterbroadcasting.com/feeds/FauxShowHD.xml",
-            "FauxShow MP3 RSS": "http://www.jupiterbroadcasting.com/feeds/FauxShowMP3.xml",
-            "FauxShow Mobile RSS": "http://www.jupiterbroadcasting.com/feeds/FauxShowMobile.xml",
-            "FauxShow iTunes": "http://itunes.apple.com/us/podcast/fauxshow-hd/id522616872"
+            "FauxShow HD RSS": "http://www.jupiterbroadcasting.com"
+                               "/feeds/FauxShowHD.xml",
+            "FauxShow MP3 RSS": "http://www.jupiterbroadcasting.com/feeds"
+                                "/FauxShowMP3.xml",
+            "FauxShow Mobile RSS": "http://www.jupiterbroadcasting.com"
+                                   "/feeds/FauxShowMobile.xml",
+            "FauxShow iTunes": "http://itunes.apple.com/us/podcast"
+                               "/fauxshow-hd/id522616872"
         },
         "title": "Fauxshow"
     },
@@ -102,11 +110,16 @@ SHOWS = {
     "Jupiter Broadcasting": {
         "href": "http://jupiterbroadcasting.com/",
         "rss": {
-            "Large Video RSS": "http://feeds2.feedburner.com/AllJupiterVideos",
-            "MP3 Audio RSS": "http://feeds2.feedburner.com/JupiterBroadcasting",
-            "OGG Audio RSS": "http://feeds2.feedburner.com/AllJupiterBroadcastingShowsOgg",
-            "iTunes Large Video": "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=286971585",
-            "iTunes MP3": "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=280019325"
+            "Large Video RSS": "http://feeds2.feedburner.com"
+                               "/AllJupiterVideos",
+            "MP3 Audio RSS": "http://feeds2.feedburner.com"
+                             "/JupiterBroadcasting",
+            "OGG Audio RSS": "http://feeds2.feedburner.com"
+                             "/AllJupiterBroadcastingShowsOgg",
+            "iTunes Large Video": "http://itunes.apple.com/WebObjects"
+                                  "/MZStore.woa/wa/viewPodcast?id=286971585",
+            "iTunes MP3": "http://itunes.apple.com/WebObjects/MZStore.woa/wa"
+                          "/viewPodcast?id=280019325"
         },
         "title": "Jupiter Broadcasting",
         "alt": ["J.B."],
@@ -121,7 +134,8 @@ SHOWS = {
         "title": "Jupiter@Nite"
     },
     "Legend of the Stoned Owl": {
-        "href": "http://www.jupiterbroadcasting.com/show/legend-of-the-stoned-owl/",
+        "href": "http://www.jupiterbroadcasting.com/show"
+                "/legend-of-the-stoned-owl/",
         "title": "Legend of the Stoned Owl"
     },
     "Linux Unplugged": {
@@ -129,10 +143,13 @@ SHOWS = {
         "rss": {
             "MP3 Audio RSS": "http://feeds.feedburner.com/linuxunplugged",
             "Ogg Audio RSS": "http://feeds.feedburner.com/linuxunogg",
-            "Torrent RSS": "http://bitlove.org/jupiterbroadcasting/linuxunvid/feed",
+            "Torrent RSS": "http://bitlove.org/jupiterbroadcasting"
+                           "/linuxunvid/feed",
             "Video RSS": "http://feeds.feedburner.com/linuxunvid",
-            "WebM Torrent RSS": "http://bitlove.org/jupiterbroadcasting/linuxunwebm/downloads.rss",
-            "iTunes Audio": "https://itunes.apple.com/us/podcast/linux-unplugged-podcast/id687598126"
+            "WebM Torrent RSS": "http://bitlove.org/jupiterbroadcasting"
+                                "/linuxunwebm/downloads.rss",
+            "iTunes Audio": "https://itunes.apple.com/us/podcast"
+                            "/linux-unplugged-podcast/id687598126"
         },
         "title": "Linux Unplugged"
     },
@@ -148,18 +165,26 @@ SHOWS = {
         "rss": {
             "MP3 Audio RSS": "http://feeds.feedburner.com/planbmp3",
             "Ogg Audio RSS": "http://feeds.feedburner.com/planbogg",
-            "Torrent RSS": "http://bitlove.org/jupiterbroadcasting/planbvid/feed",
+            "Torrent RSS": "http://bitlove.org/jupiterbroadcasting"
+                           "/planbvid/feed",
             "Video RSS": "http://feeds.feedburner.com/PlanBVideo",
-            "iTunes Audio": "https://itunes.apple.com/us/podcast/plan-b/id634760977"
+            "iTunes Audio": "https://itunes.apple.com/us/podcast/plan-b"
+                            "/id634760977"
         },
         "title": "Plan B"
     },
     "Podcast Networks": {
         "rss": {
-            "Miro": "http://subscribe.getmiro.com/?url1=http%3A//feeds2.feedburner.com/JupiterBroadcastingVideos&trackback1=http%3A//www.miroguide.com/feeds/9506/subscribe-hit&section1=video",
+            "Miro": "http://subscribe.getmiro.com/"
+                    "?url1=http%3A//feeds2.feedburner.com/"
+                    "JupiterBroadcastingVideos&trackback1="
+                    "http%3A//www.miroguide.com/feeds/9506"
+                    "/subscribe-hit&section1=video",
             "Stitcher": "http://landing.stitcher.com/?srcid=515",
-            "Zune": "http://social.zune.net/redirect?type=podcastseries&id=66a6dec9-5ff2-45c6-99cd-0d74d4d02f5e&target=client",
-            "iTunes": "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=286971585"
+            "Zune": ("http://social.zune.net/redirect?type=podcastseries"
+                     "&id=66a6dec9-5ff2-45c6-99cd-0d74d4d02f5e&target=client"),
+            "iTunes": ("http://itunes.apple.com/WebObjects/MZStore.woa/wa"
+                       "/viewPodcast?id=286971585")
         },
         "title": "Podcast Networks"
     },
@@ -192,7 +217,8 @@ SHOWS = {
             "Ogg Audio": "http://feedpress.me/t3ogg",
             "Torrent": "http://bitlove.org/jupiterbroadcasting/t3mob/feed",
             "Video": "http://feedpress.me/t3mob",
-            "iTunes mp3": "https://itunes.apple.com/us/podcast/tech-talk-today-mp3/id885658551",
+            "iTunes mp3": ("https://itunes.apple.com/us/podcast"
+                           "/tech-talk-today-mp3/id885658551"),
             "mp3 Audio": "http://feedpress.me/t3mp3"
         },
         "title": "Tech Talk Today"
@@ -213,12 +239,17 @@ SHOWS = {
             "TechSNAP HD RSS": "http://feeds.feedburner.com/techsnaphd",
             "TechSNAP Large RSS": "http://feeds.feedburner.com/techsnaplarge",
             "TechSNAP MP3 RSS": "http://feeds.feedburner.com/techsnapmp3",
-            "TechSNAP Mobile RSS": "http://feeds.feedburner.com/techsnapmobile",
+            "TechSNAP Mobile RSS": "http://feeds.feedburner.com"
+                                   "/techsnapmobile",
             "TechSNAP OGG RSS": "http://feeds.feedburner.com/techsnapogg",
-            "TechSNAP iTunes HD": "http://itunes.apple.com/us/podcast/techsnap-in-hd/id433058842",
-            "TechSNAP iTunes Large": "http://itunes.apple.com/us/podcast/techsnap-large-video/id433058851",
-            "TechSNAP iTunes MP3": "http://itunes.apple.com/us/podcast/techsnap-mp3/id433059024",
-            "TechSNAP iTunes Mobile": "http://itunes.apple.com/us/podcast/techsnap-mobile-video/id433058959"
+            "TechSNAP iTunes HD": "http://itunes.apple.com/us/podcast"
+                                  "/techsnap-in-hd/id433058842",
+            "TechSNAP iTunes Large": "http://itunes.apple.com/us/podcast"
+                                     "/techsnap-large-video/id433058851",
+            "TechSNAP iTunes MP3": "http://itunes.apple.com/us/podcast"
+                                   "/techsnap-mp3/id433059024",
+            "TechSNAP iTunes Mobile": "http://itunes.apple.com/us/podcast"
+                                      "/techsnap-mobile-video/id433058959"
         },
         "title": "Techsnap",
         "href": "http://www.jupiterbroadcasting.com/show/techsnap/",
@@ -227,13 +258,20 @@ SHOWS = {
     "The Linux Action Show!": {
         "href": "http://www.jupiterbroadcasting.com/show/linuxactionshow/",
         "rss": {
-            "Large Video RSS": "http://feeds.feedburner.com/computeractionshowvideo",
-            "MP3 Audio RSS": "http://feeds2.feedburner.com/TheLinuxActionShow",
-            "Ogg Audio RSS": "http://feeds2.feedburner.com/TheLinuxActionShowOGG",
-            "iPod Video RSS": "http://feeds.feedburner.com/linuxactionshowipodvid",
-            "iTunes Large Video": "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=337466330",
-            "iTunes MP3": "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=160075139",
-            "iTunes iPod Video": "http://itunes.apple.com/us/podcast/the-linux-action-show-ipod/id373583809"
+            "Large Video RSS": "http://feeds.feedburner.com"
+                               "/computeractionshowvideo",
+            "MP3 Audio RSS": "http://feeds2.feedburner.com"
+                             "/TheLinuxActionShow",
+            "Ogg Audio RSS": "http://feeds2.feedburner.com"
+                             "/TheLinuxActionShowOGG",
+            "iPod Video RSS": "http://feeds.feedburner.com"
+                              "/linuxactionshowipodvid",
+            "iTunes Large Video": "http://itunes.apple.com/WebObjects"
+                                  "/MZStore.woa/wa/viewPodcast?id=337466330",
+            "iTunes MP3": "http://itunes.apple.com/WebObjects/MZStore.woa"
+                          "/wa/viewPodcast?id=160075139",
+            "iTunes iPod Video": "http://itunes.apple.com/us/podcast"
+                                 "/the-linux-action-show-ipod/id373583809"
         },
         "title": "The Linux Action Show!",
         "alt": ['linux action show', "las", "l.a.s.", "lass"]
@@ -245,11 +283,19 @@ SHOWS = {
     "Unfilter": {
         "href": "http://www.jupiterbroadcasting.com/show/unfilter/",
         "rss": {
-            "HD Video RSS": "http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml",
-            "MP3 Audio RSS": "http://www.jupiterbroadcasting.com/feeds/unfilterMP3.xml",
-            "Mobile Video RSS": "http://www.jupiterbroadcasting.com/feeds/unfilterMob.xml",
-            "OGG Audio RSS": "http://www.jupiterbroadcasting.com/feeds/unfilterogg.xml",
-            "unfilter on iTunes": "http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=podcast&media=all&page=1&restrict=true&startIndex=0&term=Unfilter"
+            "HD Video RSS": "http://www.jupiterbroadcasting.com/feeds"
+                            "/unfilterHD.xml",
+            "MP3 Audio RSS": "http://www.jupiterbroadcasting.com/feeds"
+                             "/unfilterMP3.xml",
+            "Mobile Video RSS": "http://www.jupiterbroadcasting.com/feeds"
+                                "/unfilterMob.xml",
+            "OGG Audio RSS": "http://www.jupiterbroadcasting.com/feeds"
+                             "/unfilterogg.xml",
+            "unfilter on iTunes": "http://ax.search.itunes.apple.com"
+                                  "/WebObjects/MZSearch.woa/wa"
+                                  "/search?entity=podcast&media=all"
+                                  "&page=1&restrict=true&startIndex=0"
+                                  "&term=Unfilter"
         },
         "title": "Unfilter"
     },
@@ -257,6 +303,7 @@ SHOWS = {
         "href": "http://www.jupiterbroadcasting.com/show/wtr/"
     }
 }
+
 
 class JbSkill(MycroftSkill):
 
@@ -427,7 +474,6 @@ class JbSkill(MycroftSkill):
                         href = episode_link
                         open_cmd = self.get_media_command()
                 break
-
 
             subprocess.check_output([open_cmd, href])
 
