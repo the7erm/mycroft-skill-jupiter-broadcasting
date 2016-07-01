@@ -59,7 +59,7 @@ note `vlc --flag` will not work.  You'll need to write a wrapper script that
 calls `vlc` with the command line arguments you'd like.
 
 ```ini
-[JupiterBroadcastingSkill]
+[JbSkill]
 webpage_command = xdg-open
 media_command = xdg-open
 ```
@@ -67,3 +67,6 @@ media_command = xdg-open
 ## feedcache
 The JbSkill will only fetch a podcast once per hour.
 `~/.mycroft/skills/JbSkill/feedcache` is the location of the cache file.
+
+
+In the event that the device you want your media to play/view isn't the same box as you run mycroft on you'll want to read [ssh how to](https://github.com/the7erm/mycroft-skill-jupiter-broadcasting/blob/master/docs/how-to-ssh.md).
