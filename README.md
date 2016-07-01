@@ -58,6 +58,8 @@ Everyone has their favorite media player feel free to set it to `vlc` please
 note `vlc --flag` will not work.  You'll need to write a wrapper script that
 calls `vlc` with the command line arguments you'd like.
 
+`mycroft.ini` can be changed in either `/etc/mycroft/mycroft.ini` for system wide configuration or `$HOME/.mycroft/mycroft.ini` for a specific user.
+
 ```ini
 [JbSkill]
 webpage_command = xdg-open
