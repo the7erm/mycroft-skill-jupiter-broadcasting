@@ -71,4 +71,4 @@ The JbSkill will only fetch a podcast once per hour.
 `~/.mycroft/skills/JbSkill/feedcache` is the location of the cache file.
 
 
-In the event that the device you want your media to play/view isn't the same box as you run mycroft on you'll want to read [ssh how to](https://github.com/the7erm/mycroft-skill-jupiter-broadcasting/blob/master/docs/how-to-ssh.md).
+In the event that the device you want your media to play/view isn't the same box as you run mycroft on you'll want to read [ssh how to](https://github.com/the7erm/mycroft-skill-jupiter-broadcasting/blob/master/how-to/how-to-ssh.md).
