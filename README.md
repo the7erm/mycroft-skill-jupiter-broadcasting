@@ -31,7 +31,6 @@ This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/op
 | Linux Action News |
 | MMOrgue |
 | Plan B |
-| Podcast Networks |
 | Rover Log |
 | Scibyte |
 | Stoked |
@@ -45,28 +44,28 @@ This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/op
 
 ## Install
 ```
-mkdir -p ~/.mycroft/skills/
-cd ~/.mycroft/skills/
-git clone https://github.com/the7erm/mycroft-skill-jupiter-broadcasting.git jupiter_broadcasting
-source ~/.virtualenvs/mycroft/bin/activate
+cd /opt/mycroft/skills
+git clone https://github.com/the7erm/mycroft-skill-jupiter-broadcasting.git skill-jupiter-broadcasting
+cd skill-jupiter-broadcasting
+workon mycroft
 # if that doesn't work try `source <path to virtualenv/bin/activate>`
 pip install -r requirements.txt
 # restart mycroft
 ./mycroft.sh restart
 ```
 
-## Configuring `mycroft.ini`
+## Configuring `mycroft.conf`
 By default the `JBSkill` uses `xdg-open` to open media & webpages.
 Everyone has their favorite media player feel free to set it to `vlc` please
 note `vlc --flag` will not work.  You'll need to write a wrapper script that
 calls `vlc` with the command line arguments you'd like.
 
-`mycroft.ini` can be changed in either `/etc/mycroft/mycroft.ini` for system wide configuration or `$HOME/.mycroft/mycroft.ini` for a specific user.
 
-```ini
-[JbSkill]
-webpage_command = xdg-open
-media_command = xdg-open
+```json
+"JbSkill": {
+    "media_command": "vlc",
+    "webpage_command": "xdg-open"
+}
 ```
 
 ## feedcache

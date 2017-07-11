@@ -86,14 +86,13 @@ nohup ssh user@host /path/to/vlc.sh "$@" &>/dev/null
 nohup ssh user@host /path/to/firefox.sh "$@" &>/dev/null
 ```
 
-Lastly edit your `mycroft.ini` file
-### `mycroft.ini`
-```ini
-[JbSkill]
-# Media player you want the PodcastSkill to use
-media_command = "/path/to/vlc.sh"
-# Browser you'd like the PodcastSkill to use
-webpage_command = "/path/to/firefox.sh"
+Lastly edit your `mycroft.conf` file
+### `mycroft.conf`
+```json
+"JbSkill": {
+    "media_command": "/path/to/vlc.sh",
+    "webpage_command": "/path/to/firefox.sh"
+}
 ```
 
 Restart mycroft services, and test.
