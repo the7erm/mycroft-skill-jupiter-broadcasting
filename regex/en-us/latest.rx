@@ -1,4 +1,0 @@
-(?P<Show>.*) episode
-(?P<Show>.*) site
-(?P<Show>.*) page
-(?P<Show>.*)

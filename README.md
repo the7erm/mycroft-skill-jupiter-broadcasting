@@ -1,7 +1,7 @@
 # mycroft-skill-jupiter-broadcasting
 My 2nd attempt at creating a mycroft skill
 
-This is a 3rd party skill that can either reside in `~/.mycroft/third_party_skills/` or `/opt/mycroft/third_party` .
+This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/opt/mycroft/skills` .
 
 # Intents
 | Intent         | Example Keyphrase                                         | Function                                                    | Output                                                                                                            |
@@ -38,12 +38,13 @@ This is a 3rd party skill that can either reside in `~/.mycroft/third_party_skil
 | The Linux Action Show! |
 | Torked |
 | Unfilter |
+| User Error |
 | Women's Tech Radio |
 
 ## Install
 ```
-mkdir -p ~/.mycroft/third_party_skills/
-cd ~/.mycroft/third_party_skills/
+mkdir -p ~/.mycroft/skills/
+cd ~/.mycroft/skills/
 git clone https://github.com/the7erm/mycroft-skill-jupiter-broadcasting.git jupiter_broadcasting
 source ~/.virtualenvs/mycroft/bin/activate
 # if that doesn't work try `source <path to virtualenv/bin/activate>`

@@ -299,6 +299,18 @@ SHOWS = {
         },
         "title": "Unfilter"
     },
+    "User Error": {
+        "href": "http://www.jupiterbroadcasting.com/show/error/",
+        "rss": {
+            "HD Video RSS": "https://feedpress.me"
+                             "/uevideo",
+            "MP3 Audio RSS": "https://feedpress.me"
+                             "/usererror",
+            "unfilter on iTunes": "https://itunes.apple.com/us/podcast"
+                                   "/user-error-podcast/id1145648639"
+        },
+        "title": "User Error"
+    },
     "Women's Tech Radio": {
         "href": "http://www.jupiterbroadcasting.com/show/wtr/"
     }
@@ -332,19 +344,19 @@ class JbSkill(MycroftSkill):
 
         listen_intent = IntentBuilder(
             "JbListenIntent").require("JbPlayKeyword").require(
-                "LatestKeyword").require("Show").build()
+                "LatestKeyword").require("Show").optionally("EpisodeKeyword").build()
 
         self.register_intent(listen_intent, self.handle_jb_listen_intent)
 
         latest_intent = IntentBuilder(
             "JbLatestIntent").require("LatestKeyword").require(
-                "Show").build()
+                "Show").optionally("EpisodeKeyword").build()
 
         self.register_intent(latest_intent, self.handle_jb_latest_intent)
 
         open_intent = IntentBuilder(
             "JbOpenIntent").require("OpenKeyword").require(
-                "Show").build()
+                "Show").optionally("EpisodeKeyword").build()
 
         self.register_intent(open_intent, self.handle_jb_open_intent)
 
@@ -380,6 +392,7 @@ class JbSkill(MycroftSkill):
             self.add_token(title, entry)
 
     def add_token(self, token, entry):
+        LOGGER.debug("show token added:%s" % token)
         self.register_vocabulary(token, "Show")
         if token in self.showmap:
             self.showmap[token] += entry
@@ -448,9 +461,9 @@ class JbSkill(MycroftSkill):
         return False
 
     def iterate_shows_to_latest(self, message, media=False):
-        show_name = message.metadata.get('Show')
+        show_name = message.data.get('Show')
         entries = self.showmap.get(show_name)
-        LOGGER.debug("message:%s" % message)
+        LOGGER.debug("show name:%s" %show_name )
         LOGGER.debug("latest entries:%s" % entries)
 
         if entries and len(entries) > 0:
@@ -484,9 +497,9 @@ class JbSkill(MycroftSkill):
         self.iterate_shows_to_latest(message, True)
 
     def handle_jb_open_intent(self, message):
-        show_name = message.metadata.get('Show')
+        show_name = message.data.get('Show')
         entries = self.showmap.get(show_name)
-        LOGGER.debug("message:%s" % message)
+        LOGGER.debug("show name:%s" %show_name )
 
         if entries and len(entries) > 0:
             entry = entries[0]
