@@ -31,6 +31,13 @@ __author__ = 'the7erm'
 LOGGER = getLogger(__name__)
 
 SHOWS = {
+    "Ask Noah": {
+        "href": "http://www.jupiterbroadcasting.com/show/asknoah/",
+        "rss": {
+            "MP3 Audio RSS": "https://asknoah.fireside.fm/rss",
+            "HD Video RSS": "http://feedpress.me/AskNoahHD"
+        }
+    },
     "BSD Now!": {
         "alt": [
             "B.S.D. Now"
@@ -302,12 +309,10 @@ SHOWS = {
     "User Error": {
         "href": "http://www.jupiterbroadcasting.com/show/error/",
         "rss": {
-            "HD Video RSS": "https://feedpress.me"
-                             "/uevideo",
-            "MP3 Audio RSS": "https://feedpress.me"
-                             "/usererror",
-            "unfilter on iTunes": "https://itunes.apple.com/us/podcast"
-                                   "/user-error-podcast/id1145648639"
+            "HD Video RSS": "https://feedpress.me/uevideo",
+            "MP3 Audio RSS": "https://feedpress.me/usererror",
+            "unfilter on iTunes": "https://itunes.apple.com/us/podcast/"
+                                  "user-error-podcast/id1145648639"
         },
         "title": "User Error"
     },
