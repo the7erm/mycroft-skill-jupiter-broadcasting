@@ -41,7 +41,8 @@ SHOWS = {
     },
     "BSD Now!": {
         "alt": [
-            "B.S.D. Now"
+            "bsd now",
+            "B.S.D. Now",
         ],
         "href": "http://www.jupiterbroadcasting.com/show/bsdnow/",
         "rss": {
@@ -79,7 +80,8 @@ SHOWS = {
     "Fauxshow": {
         "alt": [
             "Faux show",
-            "Foe Show"
+            "Foe Show",
+            "fo-sho"
         ],
         "href": "http://www.jupiterbroadcasting.com/show/fauxshow/",
         "rss": {
@@ -472,10 +474,34 @@ class JbSkill(MycroftSkill):
                 return True
         return False
 
+    def get_show_entries(self, show_name):
+        entries = self.showmap.get(show_name)
+        if entries and len(entries) > 0:
+            return entries
+
+        for name, data in self.showmap.items():
+            LOGGER.debug("name:%s" % name)
+            lower_name = name.lower()
+            title = data.get("title", "")
+            if title:
+                title = title.lower()
+                if show_name in title:
+                    return data
+
+            for alt in data.get("alt",[]):
+                if show_name in alt.lower():
+                    return data
+
+            if show_name in lower_name:
+                return data
+
+        return []
+
+
     def iterate_shows_to_latest(self, message, media=False):
         show_name = message.data.get('Show')
-        entries = self.showmap.get(show_name)
-        LOGGER.debug("show name:%s" %show_name )
+        entries = self.get_show_entries(show_name)
+        LOGGER.debug("show name:%s" % show_name )
         LOGGER.debug("latest entries:%s" % entries)
 
         if entries and len(entries) > 0:

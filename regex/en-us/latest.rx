@@ -1,4 +1,4 @@
-(?P<Podcast>.*) episode
-(?P<Podcast>.*) site
-(?P<Podcast>.*) page
-(?P<Podcast>.*) website
+(?P<Show>.*) episode
+(?P<Show>.*) site
+(?P<Show>.*) page
+(?P<Show>.*) website
