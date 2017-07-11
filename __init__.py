@@ -36,7 +36,8 @@ SHOWS = {
         "rss": {
             "MP3 Audio RSS": "https://asknoah.fireside.fm/rss",
             "HD Video RSS": "http://feedpress.me/AskNoahHD"
-        }
+        },
+        "title": "Ask Noah"
     },
     "BSD Now!": {
         "alt": [
@@ -282,6 +283,12 @@ SHOWS = {
         },
         "title": "The Linux Action Show!",
         "alt": ['linux action show', "las", "l.a.s.", "lass"]
+    },
+    "Linux Action News": {
+        "title": "Linux action news",
+        "rss": {
+            "MP3 Audio RSS": "http://linuxactionnews.com/rss"
+        }
     },
     "Torked": {
         "href:": "http://www.jupiterbroadcasting.com/show/torked/",
