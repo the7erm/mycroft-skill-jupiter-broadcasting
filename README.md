@@ -1,8 +1,6 @@
 # mycroft-skill-jupiter-broadcasting
 My 2nd attempt at creating a mycroft skill
 
-This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/opt/mycroft/skills` .
-
 # Intents
 | Intent         | Example Keyphrase                                         | Function                                                    | Output                                                                                                            |
 |----------------|-----------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
