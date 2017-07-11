@@ -15,6 +15,7 @@ This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/op
 # Shows
 | Show |
 |------|
+| Ask Noah |
 | BSD Now! |
 | Beer is Tasty |
 | Coder Radio |
@@ -27,6 +28,7 @@ This is a 3rd party skill that can either reside in `~/.mycroft/skills/` or `/op
 | Jupiter@Nite |
 | Legend of the Stoned Owl |
 | Linux Unplugged |
+| Linux Action News |
 | MMOrgue |
 | Plan B |
 | Podcast Networks |
